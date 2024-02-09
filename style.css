@@ -1,6 +1,11 @@
 window.bar {
     background-color: black;
     color: white;
+    font-family: "JetBrains mono";
+}
+
+.workspaces button{
+    background-color: azure;
 }
 
 button {
