@@ -8,6 +8,11 @@ window.bar {
     background-color: azure;
 }
 
+.workspaces.test{
+    background-color: wheat;
+    background: darksalmon;
+}
+
 button {
     min-width: 0;
     padding-top: 0;
@@ -39,6 +44,10 @@ label {
 
 .notification {
     color: yellow;
+}
+
+.test{
+    background-color: white;
 }
 
 progress,

@@ -58,7 +58,7 @@ const Clock = () => Widget.Label({
 
 const activateContextMenu = () => Widget.Button({
     class_name: 'cmButton',
-    on_clicked: contextMenu(0),
+    on_clicked: () => {contextMenu(0)},
 })
 
 // const Volume = () => Widget.Box({
@@ -120,9 +120,9 @@ const Right = () => Widget.Box({
 });
 
 const contextMenu = (monitor = 0) => Widget.Window({
-    name: 'contextMenu-${monitor}',
+    name: 'test',
     monitor,
-    class_name: 'contextMenu',
+    class_name: 'test',
     anchor: ['top', 'left', 'right',],
     exclusivity: 'exclusive'
 })
