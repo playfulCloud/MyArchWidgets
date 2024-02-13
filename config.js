@@ -1,9 +1,4 @@
 import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
-import Notifications from 'resource:///com/github/Aylur/ags/service/notifications.js';
-import Mpris from 'resource:///com/github/Aylur/ags/service/mpris.js';
-import Audio from 'resource:///com/github/Aylur/ags/service/audio.js';
-import Battery from 'resource:///com/github/Aylur/ags/service/battery.js';
-import SystemTray from 'resource:///com/github/Aylur/ags/service/systemtray.js';
 import App from 'resource:///com/github/Aylur/ags/app.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
@@ -61,37 +56,6 @@ const activateContextMenu = () => Widget.Button({
     on_clicked: () => {contextMenu(0)},
 })
 
-// const Volume = () => Widget.Box({
-//     class_name: 'volume',
-//     css: 'min-width: 180px',
-//     children: [
-//         Widget.Icon().hook(Audio, self => {
-//             if (!Audio.speaker)
-//                 return;
-
-//             const category = {
-//                 101: 'overamplified',
-//                 67: 'high',
-//                 34: 'medium',
-//                 1: 'low',
-//                 0: 'muted',
-//             };
-
-//             const icon = Audio.speaker.is_muted ? 0 : [101, 67, 34, 1, 0].find(
-//                 threshold => threshold <= Audio.speaker.volume * 100);
-
-//             self.icon = `audio-volume-${category[icon]}-symbolic`;
-//         }, 'speaker-changed'),
-//         Widget.Slider({
-//             hexpand: true,
-//             draw_value: false,
-//             on_change: ({ value }) => Audio.speaker.volume = value,
-//             setup: self => self.hook(Audio, () => {
-//                 self.value = Audio.speaker?.volume || 0;
-//             }, 'speaker-changed'),
-//         }),
-//     ],
-// });
 
 
 
@@ -110,6 +74,13 @@ const Center = () => Widget.Box({
     ],
 });
 
+const childrenOfContextMenu = () => Widget.Box({
+    spacing: 8,
+    children: [
+      
+    ],
+});
+
 const Right = () => Widget.Box({
     hpack: 'end',
     spacing: 8,
@@ -119,12 +90,14 @@ const Right = () => Widget.Box({
     ],
 });
 
-const contextMenu = (monitor = 0) => Widget.Window({
-    name: 'test',
+const contextMenu = ({ monitor = 0 }) => Widget.Window({
+    class_name: 'menu',
     monitor,
-    class_name: 'test',
-    anchor: ['top', 'left', 'right',],
-    exclusivity: 'exclusive'
+    anchor: ['right','top'],
+    exclusivity: 'exclusive',
+    layer: 'top',
+    child: Widget.Label('hello'),
+    
 })
 
 const Bar = (monitor = 0) => Widget.Window({
@@ -154,7 +127,7 @@ monitorFile(
 export default {
     style: App.configDir + '/style.css',
     windows: [
-        Bar(),
+        Bar(0)
 
         // you can call it, for each monitor
         // Bar(0),

@@ -4,22 +4,31 @@ window.bar {
     font-family: "JetBrains mono";
 }
 
-.workspaces button{
-    background-color: azure;
+.workspaces {
+    background-color: #33312b;
+    border-radius: 20%;
 }
 
-.workspaces.test{
-    background-color: wheat;
-    background: darksalmon;
+.menu{
+    background: #78dbaa;
+    min-width: 50px;
 }
+
+
+.cmButton{
+background: #78dbaa;
+min-width: 50px;
+}
+
+
 
 button {
     min-width: 0;
     padding-top: 0;
     padding-bottom: 0;
-    background: green;
-    border-radius: 50%;
-    color: purple;
+    background: white;
+    border-radius: 20%;
+    color: #78dbaa;
 }
 
 button:active {
@@ -36,21 +45,4 @@ label {
 
 .workspaces button.focused {
     border-bottom: 3px solid #78dbaa;
-}
-
-.client-title {
-    color: #78dbaa;
-}
-
-.notification {
-    color: yellow;
-}
-
-.test{
-    background-color: white;
-}
-
-progress,
-highlight {
-    min-height: 8px;
 }
