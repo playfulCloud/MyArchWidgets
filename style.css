@@ -1,12 +1,12 @@
 window.bar {
     background-color: black;
     color: white;
-    font-family: "JetBrains mono";
+    font-family: "JetBrainsMono Nerd Font";
 }
 
 .workspaces {
-    background-color: #33312b;
-    border-radius: 20%;
+    background-color: black;
+    border-radius: 0%;
 }
 
 .menu{
@@ -20,23 +20,22 @@ background: #78dbaa;
 min-width: 50px;
 }
 
-
-
 button {
-    min-width: 0;
+    all: unset;
     padding-top: 0;
     padding-bottom: 0;
-    background: white;
-    border-radius: 20%;
+    margin: 5px;
+    background: black;
+    border-radius: 0%;
     color: #78dbaa;
 }
 
 button:active {
-    background: red;
+    color: white;
 }
 
 button:hover {
-    border-bottom: 3px solid #78dbaa;
+    color: white;
 }
 
 label {
@@ -44,5 +43,5 @@ label {
 }
 
 .workspaces button.focused {
-    border-bottom: 3px solid #78dbaa;
+    color: white;
 }
