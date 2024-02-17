@@ -1,1 +1,2 @@
 #My Arch widgets
+#score
