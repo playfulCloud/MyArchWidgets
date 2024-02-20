@@ -8,9 +8,6 @@ import App from 'resource:///com/github/Aylur/ags/app.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
 
-// widgets can be only assigned as a child in one container
-// so to make a reuseable widget, make it a function
-// then you can simply instantiate one by calling it
 
 const Workspaces = () => Widget.Box({
     class_name: 'workspaces',
@@ -53,9 +50,10 @@ const Notification = () => Widget.Box({
 
 const Volume = () => Widget.Box({
     class_name: 'volume',
-    css: 'min-width: 180px',
+    css: 'min-width: 100px',
     children: [
         Widget.Icon().hook(Audio, self => {
+
             if (!Audio.speaker)
                 return;
 
@@ -66,25 +64,20 @@ const Volume = () => Widget.Box({
                 1: 'low',
                 0: 'muted',
             };
-
             const icon = Audio.speaker.is_muted ? 0 : [101, 67, 34, 1, 0].find(
                 threshold => threshold <= Audio.speaker.volume * 100);
-
+            
             self.icon = `audio-volume-${category[icon]}-symbolic`;
         }, 'speaker-changed'),
-        Widget.Slider({
-            hexpand: true,
-            draw_value: false,
-            on_change: ({ value }) => Audio.speaker.volume = value,
-            setup: self => self.hook(Audio, () => {
-                self.value = Audio.speaker?.volume || 0;
-            }, 'speaker-changed'),
-        }),
+        Widget.Button({
+        })   
     ],
 });
 
 
-// layout of the bar
+
+
+
 const Left = () => Widget.Box({
     spacing: 8,
     children: [
@@ -95,7 +88,7 @@ const Left = () => Widget.Box({
 const Center = () => Widget.Box({
     spacing: 8,
     children: [
-        Clock()
+        Clock(),
     ],
 });
 
