@@ -69,13 +69,16 @@ const Volume = () => Widget.Box({
             
             self.icon = `audio-volume-${category[icon]}-symbolic`;
         }, 'speaker-changed'),
-        Widget.Button({
-        })   
+         Widget.Button({            
+              on_clicked: () => Audio.speaker.volume = !Audio.speaker.volume,
+              on_scroll_up: () => Audio.speaker.volume = Audio.speaker.volume + 0.1,
+              on_scroll_down: () => Audio.speaker.volume = Audio.speaker.volume -0.1,
+              child: Widget.Label('-').hook(Audio,self =>{
+                  self.label = `${Math.round(Audio.speaker.volume * 100)}%`;
+              }),
+          }),
     ],
 });
-
-
-
 
 
 const Left = () => Widget.Box({
