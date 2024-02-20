@@ -18,9 +18,13 @@ window.bar {
 
 .volume{
   color: #78dbaa;
+  background-color: gray;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 button {
+    all: unset;
     padding-top: 0;
     padding-bottom: 0;
     margin: 5px;
