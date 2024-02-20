@@ -50,7 +50,7 @@ const Notification = () => Widget.Box({
 
 const Volume = () => Widget.Box({
     class_name: 'volume',
-    css: 'min-width: 100px',
+    css: 'min-width: 65px',
     children: [
         Widget.Icon().hook(Audio, self => {
 

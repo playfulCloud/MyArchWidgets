@@ -18,9 +18,22 @@ window.bar {
 
 .volume{
   color: #78dbaa;
-  background-color: gray;
+  background-color: #2e2e2e;
   margin: 5px;
   border-radius: 5px;
+  padding-left: 5px;
+}
+
+.volume button:hover{
+  color: #78dbaa;
+}
+
+
+
+.volume button{
+  color: white;
+  background: #2e2e2e;
+
 }
 
 button {
