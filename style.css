@@ -15,13 +15,12 @@ window.bar {
 }
 
 
-.cmButton{
-background: #78dbaa;
-min-width: 50px;
+
+.volume{
+  color: #78dbaa;
 }
 
 button {
-    all: unset;
     padding-top: 0;
     padding-bottom: 0;
     margin: 5px;
