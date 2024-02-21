@@ -64,6 +64,14 @@ const Volume = () => Widget.Box({
     ],
 });
 
+const Network = () => Widget.Box({
+    class_name: 'Network',
+    css: 'min-width: 65px',
+    children: [
+        
+    ],
+});
+
 
 const Left = () => Widget.Box({
     spacing: 8,
@@ -76,6 +84,7 @@ const Center = () => Widget.Box({
     spacing: 8,
     children: [
         Clock(),
+        
     ],
 });
 
@@ -84,6 +93,7 @@ const Right = () => Widget.Box({
     spacing: 8,
     children: [
         Volume(),
+        Network(),
     ],
 });
 

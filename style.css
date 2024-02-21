@@ -28,7 +28,12 @@ window.bar {
   color: #78dbaa;
 }
 
-
+.Network{
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+}
 
 .volume button{
   color: white;
