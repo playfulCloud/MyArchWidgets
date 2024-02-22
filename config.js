@@ -6,6 +6,8 @@ import Battery from 'resource:///com/github/Aylur/ags/service/battery.js';
 import SystemTray from 'resource:///com/github/Aylur/ags/service/systemtray.js';
 import App from 'resource:///com/github/Aylur/ags/app.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
+
+import Network from 'resource:///com/github/Aylur/ags/service/network.js';
 import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
 
 
@@ -64,13 +66,37 @@ const Volume = () => Widget.Box({
     ],
 });
 
-const Network = () => Widget.Box({
+const Network1 = () => Widget.Box({
     class_name: 'Network',
     css: 'min-width: 65px',
     children: [
-        
     ],
 });
+
+
+const WifiIndicator = () => Widget.Box({
+    children: [
+        Widget.Icon({
+            icon: Network.wifi.bind('icon_name'),
+        }),
+        Widget.Label({
+            label: Network.wifi.bind('ssid')
+                .as(ssid => ssid || 'Unknown'),
+        }),
+    ],
+})
+
+const WiredIndicator = () => Widget.Icon({
+    icon: Network.wired.bind('icon_name'),
+})
+
+const NetworkIndicator = () => Widget.Stack({
+    items: [
+        ['wifi', WifiIndicator()],
+        ['wired', WiredIndicator()],
+    ],
+    shown: Network.bind('primary').as(p => p || 'wifi'),
+})
 
 
 const Left = () => Widget.Box({
@@ -93,7 +119,7 @@ const Right = () => Widget.Box({
     spacing: 8,
     children: [
         Volume(),
-        Network(),
+        Network1(),
     ],
 });
 
