@@ -24,5 +24,5 @@ To interact with the audio module:
 ## Future Enhancements
 The future roadmap includes enhancements to the audio module to make it even more robust and feature-rich, as well as expanding the shell's capabilities with the addition of the network module and other planned features.
 
-## Issues so far
-cant get proper wifi list
+## Preview so far
+
