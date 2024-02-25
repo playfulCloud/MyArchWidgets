@@ -25,4 +25,5 @@ To interact with the audio module:
 The future roadmap includes enhancements to the audio module to make it even more robust and feature-rich, as well as expanding the shell's capabilities with the addition of the network module and other planned features.
 
 ## Preview so far
+![image](https://github.com/playfulCloud/MyArchWidgets/assets/55619673/77ad3d8d-47a7-4ef5-ad2b-ab33b7b0f8cb)
 
