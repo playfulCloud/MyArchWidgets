@@ -7,7 +7,6 @@ import SystemTray from 'resource:///com/github/Aylur/ags/service/systemtray.js';
 import App from 'resource:///com/github/Aylur/ags/app.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 
-import Network from 'resource:///com/github/Aylur/ags/service/network.js';
 import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
 
 
@@ -22,6 +21,7 @@ const Workspaces = () => Widget.Box({
         }));
     }),
 });
+
 const Clock = () => Widget.Label({
     class_name: 'clock',
     setup: self => self
@@ -66,37 +66,51 @@ const Volume = () => Widget.Box({
     ],
 });
 
+const network = await Service.import('network')
+
 const Network1 = () => Widget.Box({
     class_name: 'Network',
     css: 'min-width: 65px',
     children: [
+    connection(),
     ],
 });
 
-
-const WifiIndicator = () => Widget.Box({
+const connection = () => Widget.Box({
+    class_name: 'connection',
     children: [
-        Widget.Icon({
-            icon: Network.wifi.bind('icon_name'),
-        }),
-        Widget.Label({
-            label: Network.wifi.bind('ssid')
-                .as(ssid => ssid || 'Unknown'),
-        }),
-    ],
+    Widget.Icon().hook(network, self =>{
+                 if(network.primary == 'wifi'){
+                    const icon = network.wifi.strenght;
+                    const category = {
+                      100: 'excellent',
+                      67: 'good',
+                      34: 'ok',
+                      1: 'weak',
+                      0: 'none',
+                    }
+                    self.icon = `network-wireless-signal-${category[icon]}`;
+                }else if(network.primary == 'wired'){
+                  self.icon = `network-wired`;
+                }else{
+                  self.icon = `network-offline`;
+                }
+              }),
+      Widget.Button({
+          child:
+              Widget.Label('-').hook(network,self =>{
+                  if(network.primary == 'wired'){
+                    self.label = `${network.wired.internet}`;
+                  }else if(network.primary == 'wifi'){
+                    self.label = `${network.wifi.internet}`;
+                  }else{
+                    self.label = `no-network`;
+                  }
+            }), 
+      }), 
+  ], 
 })
 
-const WiredIndicator = () => Widget.Icon({
-    icon: Network.wired.bind('icon_name'),
-})
-
-const NetworkIndicator = () => Widget.Stack({
-    items: [
-        ['wifi', WifiIndicator()],
-        ['wired', WiredIndicator()],
-    ],
-    shown: Network.bind('primary').as(p => p || 'wifi'),
-})
 
 
 const Left = () => Widget.Box({
@@ -109,8 +123,7 @@ const Left = () => Widget.Box({
 const Center = () => Widget.Box({
     spacing: 8,
     children: [
-        Clock(),
-        
+        Clock(), 
     ],
 });
 
