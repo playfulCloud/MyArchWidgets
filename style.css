@@ -41,6 +41,37 @@ window.bar {
   color: #0099FF;
 }
 
+.bright {
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
+
+.batt {
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
+
+.blue {
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
+
+.power{
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
 
 .volume button{
   color: white;

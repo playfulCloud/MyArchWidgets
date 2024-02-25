@@ -109,9 +109,36 @@ const connection = () => Widget.Box({
             }), 
       }), 
   ], 
-})
+});
+
+const power = () => Widget.Box({
+    class_name: 'power',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
+
+const bright = () => Widget.Box({
+    class_name: 'bright',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
 
 
+const blue = () => Widget.Box({
+    class_name: 'blue',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
+
+const batt = () => Widget.Box({
+    class_name: 'batt',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
 
 const Left = () => Widget.Box({
     spacing: 8,
@@ -131,8 +158,13 @@ const Right = () => Widget.Box({
     hpack: 'end',
     spacing: 8,
     children: [
+        power(),
+        batt(),
         Volume(),
+        blue(),
         Network1(),
+        bright(),
+
     ],
 });
 
