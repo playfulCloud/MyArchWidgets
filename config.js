@@ -21,6 +21,7 @@ const Workspaces = () => Widget.Box({
         }));
     }),
 });
+
 const Clock = () => Widget.Label({
     class_name: 'clock',
     setup: self => self
@@ -71,21 +72,41 @@ const Network1 = () => Widget.Box({
     class_name: 'Network',
     css: 'min-width: 65px',
     children: [
-    wired(),
+    connection(),
     ],
 });
 
-const wired = () => Widget.Box({
-    class_name: 'wired',
+const connection = () => Widget.Box({
+    class_name: 'connection',
     children: [
-    Widget.Icon({
-                icon: network.wired.bind('icon_name'),
+    Widget.Icon().hook(network, self =>{
+                 if(network.primary == 'wifi'){
+                    const icon = network.wifi.strenght;
+                    const category = {
+                      100: 'excellent',
+                      67: 'good',
+                      34: 'ok',
+                      1: 'weak',
+                      0: 'none',
+                    }
+                    self.icon = `network-wireless-signal-${category[icon]}`;
+                }else if(network.primary == 'wired'){
+                  self.icon = `network-wired`;
+                }else{
+                  self.icon = `network-offline`;
+                }
               }),
       Widget.Button({
           child:
-             Widget.Label('-').hook(network,self =>{
-                self.label = `${network.wired.internet}`;
-           }) 
+              Widget.Label('-').hook(network,self =>{
+                  if(network.primary == 'wired'){
+                    self.label = `${network.wired.internet}`;
+                  }else if(network.primary == 'wifi'){
+                    self.label = `${network.wifi.internet}`;
+                  }else{
+                    self.label = `no-network`;
+                  }
+            }), 
       }), 
   ], 
 })
