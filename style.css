@@ -28,17 +28,29 @@ window.bar {
   color: #78dbaa;
 }
 
+.Network button:hover{ 
+  color: #0099FF;
+}
+
+
 .Network{
   background-color: #2e2e2e;
   margin: 5px;
   border-radius: 5px;
   padding-left: 5px;
+  color: #0099FF;
 }
+
 
 .volume button{
   color: white;
   background: #2e2e2e;
 
+}
+
+.Network button{
+  color: white;
+  background: #2e2e2e;
 }
 
 button {
