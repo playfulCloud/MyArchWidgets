@@ -28,3 +28,4 @@ The future roadmap includes enhancements to the audio module to make it even mor
 ![image](https://github.com/playfulCloud/MyArchWidgets/assets/55619673/b2ec72c0-e1ed-4d1f-8b05-1a7791664fe9)
 
 to continued
+!
