@@ -35,7 +35,6 @@ window.bar {
 
 .Network button:hover{ 
   color: #0099FF;
-  background-color:#1c1c1c; 
 }
 
 
@@ -103,6 +102,13 @@ button {
     color: #78dbaa;
 }
 
+.clock{
+  background: #2e2e2e;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 4px;
+}
+
 button:active {
     color: white;
 }
@@ -111,13 +117,18 @@ button:hover {
     color: white;
 }
 
+.workspaces button:hover {
+    color: white;
+    background-color: #202020; 
+}
+
 label {
     font-weight: bold;
 }
 
 .workspaces button.focused {
     color: white;
-    background-color: #1c1c1c; 
+    background-color: #202020;
 }
 
 .wifiBox{
@@ -126,4 +137,9 @@ label {
   min-height: 200px;
   border-radius: 5px;
   margin: 5px;
+}
+
+.clockContainer{
+    background-color: #202020; 
+    border-radius: 5px;
 }
