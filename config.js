@@ -25,11 +25,7 @@ const Workspaces = () => Widget.Box({
 const Clock = () => Widget.Label({
     class_name: 'clock',
     setup: self => self
-        // this is bad practice, since exec() will block the main event loop
-        // in the case of a simple date its not really a problem
         .poll(1000, self => self.label = exec('date "+%H:%M:%S %b %e."'))
-
-        // this is what you should do
         .poll(1000, self => execAsync(['date', '+%H:%M:%S %b %e.'])
            .then(date => self.label = date)),
 });
@@ -73,6 +69,13 @@ const Network1 = () => Widget.Box({
     css: 'min-width: 65px',
     children: [
     connection(),
+    ],
+});
+
+const clockContainer = () => Widget.Box({
+    class_name: 'clockContainer',
+    children: [
+	Clock(),
     ],
 });
 
@@ -163,7 +166,7 @@ const Left = () => Widget.Box({
 const Center = () => Widget.Box({
     spacing: 8,
     children: [
-        Clock(), 
+        clockContainer(), 
     ],
 });
 
