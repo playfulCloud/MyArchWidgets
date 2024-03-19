@@ -97,6 +97,7 @@ const connection = () => Widget.Box({
                 }
               }),
       Widget.Button({
+      on_clicked: () => wifiMenu(1),
           child:
               Widget.Label('-').hook(network,self =>{
                   if(network.primary == 'wired'){
@@ -109,7 +110,46 @@ const connection = () => Widget.Box({
             }), 
       }), 
   ], 
-})
+});
+
+const power = () => Widget.Box({
+    class_name: 'power',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
+
+const bright = () => Widget.Box({
+    class_name: 'bright',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
+
+
+const blue = () => Widget.Box({
+    class_name: 'blue',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
+
+const batt = () => Widget.Box({
+    class_name: 'batt',
+    css: 'min-width: 65px',
+    children: [
+    ],
+});
+
+
+const wifiBox = () => Widget.Box({
+    class_name: 'wifiBox',
+    children: [
+       Widget.Label("test2"),
+       Widget.Label("test2")
+
+    ],
+});
 
 
 
@@ -131,8 +171,12 @@ const Right = () => Widget.Box({
     hpack: 'end',
     spacing: 8,
     children: [
+        //power(),
+        //batt(),
         Volume(),
+        //blue(),
         Network1(),
+        //bright(),
     ],
 });
 
@@ -149,6 +193,18 @@ const Bar = (monitor = 0) => Widget.Window({
     }),
 });
 
+
+const wifiMenu = (monitor = 0) => Widget.Window({
+    name: `wifiMenu`, // name has to be unique 
+    css: 'min-width: 200px',
+    class_name: 'wifiMenu',
+    monitor,
+    anchor: ['top','right'],
+    exclusivity: 'exclusive',
+    child: wifiBox(),
+});
+
+
 import { monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
 
 monitorFile(
@@ -164,9 +220,7 @@ export default {
     style: App.configDir + '/style.css',
     windows: [
     //Bar(),
-
-        // you can call it, for each monitor
-         Bar(0),
-         Bar(1)
+        Bar(0),
+	Bar(1)
     ],
 };

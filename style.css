@@ -5,16 +5,21 @@ window.bar {
 }
 
 .workspaces {
-    background-color: black;
-    border-radius: 0%;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+}
+
+.workspaces button{	
+    background-color: #2e2e2e;
+    min-width: 25px;	
+    margin: 3px;
+    border-radius: 5px;
 }
 
 .menu{
     background: #78dbaa;
     min-width: 50px;
 }
-
-
 
 .volume{
   color: #78dbaa;
@@ -30,7 +35,10 @@ window.bar {
 
 .Network button:hover{ 
   color: #0099FF;
+  background-color:#1c1c1c; 
 }
+
+
 
 
 .Network{
@@ -41,6 +49,37 @@ window.bar {
   color: #0099FF;
 }
 
+.bright {
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
+
+.batt {
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
+
+.blue {
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
+
+.power{
+  background-color: #2e2e2e;
+  margin: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #0099FF;
+}
 
 .volume button{
   color: white;
@@ -51,6 +90,7 @@ window.bar {
 .Network button{
   color: white;
   background: #2e2e2e;
+  border-radius: 5px;
 }
 
 button {
@@ -77,4 +117,13 @@ label {
 
 .workspaces button.focused {
     color: white;
+    background-color: #1c1c1c; 
+}
+
+.wifiBox{
+  background-color: black;
+  min-width: 400px;
+  min-height: 200px;
+  border-radius: 5px;
+  margin: 5px;
 }
