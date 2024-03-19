@@ -97,6 +97,7 @@ const connection = () => Widget.Box({
                 }
               }),
       Widget.Button({
+      on_clicked: () => wifiMenu(1),
           child:
               Widget.Label('-').hook(network,self =>{
                   if(network.primary == 'wired'){
@@ -140,6 +141,18 @@ const batt = () => Widget.Box({
     ],
 });
 
+
+const wifiBox = () => Widget.Box({
+    class_name: 'wifiBox',
+    children: [
+       Widget.Label("test2"),
+       Widget.Label("test2")
+
+    ],
+});
+
+
+
 const Left = () => Widget.Box({
     spacing: 8,
     children: [
@@ -158,13 +171,12 @@ const Right = () => Widget.Box({
     hpack: 'end',
     spacing: 8,
     children: [
-        power(),
-        batt(),
+        //power(),
+        //batt(),
         Volume(),
-        blue(),
+        //blue(),
         Network1(),
-        bright(),
-
+        //bright(),
     ],
 });
 
@@ -181,6 +193,18 @@ const Bar = (monitor = 0) => Widget.Window({
     }),
 });
 
+
+const wifiMenu = (monitor = 0) => Widget.Window({
+    name: `wifiMenu`, // name has to be unique 
+    css: 'min-width: 200px',
+    class_name: 'wifiMenu',
+    monitor,
+    anchor: ['top','right'],
+    exclusivity: 'exclusive',
+    child: wifiBox(),
+});
+
+
 import { monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
 
 monitorFile(
@@ -196,9 +220,7 @@ export default {
     style: App.configDir + '/style.css',
     windows: [
     //Bar(),
-
-        // you can call it, for each monitor
-         Bar(0),
-         Bar(1)
+        Bar(0),
+	Bar(1)
     ],
 };
