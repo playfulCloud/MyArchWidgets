@@ -1,28 +1,31 @@
- 
 # My Arch widgets
 
 ## Overview
-My Arch widgets has successfully integrated a new feature: the Audio Module. This module enhances user interaction with the system's audio capabilities, providing a seamless and intuitive interface for managing sound settings.
+My Arch widgets are designed to provide an enhanced user experience by offering a set of interactive widgets for the Arch Linux environment, tailored to improve the functionality and usability of the Aylur GTK Shell.
 
 ## Features
-- **Volume Control**: Users can easily adjust the volume with a simple and user-friendly interface.
-- **Sound Indicators**: Current volume level is indicated visually, allowing for quick reference.
-- **Mute Functionality**: The module allows users to mute and unmute the system sound with a single click or keypress.
+- **Audio Control**: Manage your audio settings with ease. Adjust volume, mute/unmute, and view sound levels through a clean and minimalistic widget.
+- **Battery Indicator**: Keep track of your laptop's battery life with our straightforward battery widget.
+- **Date and Time**: Stay up to date with a simple glance at the top bar, displaying the current time and date.
+- **Network Status**: At a quick look, check whether you are connected to the internet and monitor your connection status.
 
 ## Progress
-As of the latest update, we have successfully implemented the audio handling module. This component is designed to provide a streamlined experience for controlling audio levels within the Aylur GTK Shell environment.
+The latest release has successfully integrated the audio control widget, enhancing the overall sound management experience within the shell environment. The functionality for volume control and muting has been a focus, ensuring that users have a hassle-free interaction.
 
 ## Usage
-To interact with the audio module:
-- **Increase Volume**: Scroll up on the audio icon or use designated volume up keys.
-- **Decrease Volume**: Scroll down on the audio icon or use designated volume down keys.
-- **Mute/Unmute**: Click on the audio icon or use the mute toggle key.
+To interact with the widgets:
+- **Audio Control**: Use the mouse scroll over the widget to adjust the volume, or click to mute/unmute.
+- **Battery Indicator**: Simply hover over the battery icon to get more detailed information.
+- **Date and Time**: An always-visible widget requires no interaction but can be customized in settings.
+- **Network Status**: Hover to view connection details or click to open network settings.
 
 ## Upcoming Features
-- **Network Module**: The next step in the development of My Arch widgets is to implement the Network Module. This will provide users with the ability to manage their network connections, view status information, and adjust settings related to connectivity directly from the shell interface.
+- **Brightness Control Module**: In the upcoming updates, we plan to implement a Brightness Control Module. This feature will allow users to adjust their screen brightness directly from the shell interface, providing a more complete control suite.
 
 ## Future Enhancements
-The future roadmap includes enhancements to the audio module to make it even more robust and feature-rich, as well as expanding the shell's capabilities with the addition of the network module and other planned features.
+We aim to continually enhance the My Arch widgets, ensuring each widget not only serves its primary function but also contributes to a coherent and functional desktop experience. Look forward to comprehensive updates to the audio module and the introduction of the new Brightness Control Module.
 
 ## Preview so far
-![image](https://github.com/playfulCloud/MyArchWidgets/assets/55619673/23d905e2-edd2-47ce-aac1-47e1f1ce8a0b)
+The images showcasing the current widgets are placeholders and will be updated with the actual widgets in action soon.
+![image](https://github.com/playfulCloud/MyArchWidgets/assets/55619673/07c2fddb-1e64-4e2e-a243-49a42e4b2f0f)
+
