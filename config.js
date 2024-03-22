@@ -133,10 +133,10 @@ const bright = () => Widget.Box({
 });
 
 
-const blue = () => Widget.Box({
-    class_name: 'blue',
-    css: 'min-width: 65px',
+const volumeContainer = () => Widget.Box({
+    class_name: 'volumeContainer',
     children: [
+		Volume(),
     ],
 });
 
@@ -179,7 +179,7 @@ const Right = () => Widget.Box({
     children: [
         //power(),
         //batt(),
-        Volume(),
+        volumeContainer(),
         //blue(),
         Network1(),
         //bright(),

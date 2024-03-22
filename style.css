@@ -25,9 +25,9 @@ window.bar {
 .volume{
   color: #78dbaa;
   background-color: #2e2e2e;
-  margin: 5px;
   border-radius: 5px;
   padding-left: 5px;
+  margin: 3px;
 }
 
 .volume button:hover{
@@ -38,11 +38,17 @@ window.bar {
   color: #0099FF;
 }
 
-.Network{
+.connection {
   background-color: #2e2e2e;
-  margin: 5px;
+
   border-radius: 5px;
-  padding-left: 5px;
+  margin:3px;
+}
+
+.Network{
+  background-color: #1c1c1c;
+  margin: 4px;
+  border-radius: 5px;
   color: #0099FF;
 }
 
@@ -101,7 +107,11 @@ button {
 }
 
 
-
+.volumeContainer{
+	background-color: #1c1c1c;
+	border-radius: 5px;
+	margin: 4px;
+}
 
 .clockContainer{
 	background-color: #1c1c1c;
@@ -130,7 +140,6 @@ label {
   min-width: 400px;
   min-height: 200px;
   border-radius: 5px;
-  margin: 5px;
 }
 
 .clockContainer button{
