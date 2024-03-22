@@ -7,6 +7,7 @@ window.bar {
 .workspaces {
     background-color: #1c1c1c;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .workspaces button{	
@@ -36,9 +37,6 @@ window.bar {
 .Network button:hover{ 
   color: #0099FF;
 }
-
-
-
 
 .Network{
   background-color: #2e2e2e;
@@ -102,20 +100,16 @@ button {
     color: #78dbaa;
 }
 
-.clock{
-  background: #2e2e2e;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 4px;
+
+
+
+.clockContainer{
+	background-color: #1c1c1c;
+	margin: 5px;
+	border-radius: 5px;
 }
 
-button:active {
-    color: white;
-}
 
-button:hover {
-    color: white;
-}
 
 .workspaces button:hover {
     color: white;
@@ -139,7 +133,17 @@ label {
   margin: 5px;
 }
 
-.clockContainer{
-    background-color: #202020; 
-    border-radius: 5px;
+.clockContainer button{
+   background-color: #2e2e2e;
+   border-radius: 5px;
+   margin: 3px;
+   padding: 3px;
 }
+
+
+
+.clockContainer button:hover{
+    color: white;
+    background-color: #202020;
+}
+

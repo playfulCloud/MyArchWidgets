@@ -75,7 +75,10 @@ const Network1 = () => Widget.Box({
 const clockContainer = () => Widget.Box({
     class_name: 'clockContainer',
     children: [
-	Clock(),
+	Widget.Button({
+			child: Clock(),
+ 
+		}),
     ],
 });
 
