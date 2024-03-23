@@ -129,6 +129,7 @@ const bright = () => Widget.Box({
     class_name: 'bright',
     css: 'min-width: 65px',
     children: [
+
     ],
 });
 
@@ -140,12 +141,48 @@ const volumeContainer = () => Widget.Box({
     ],
 });
 
-const batt = () => Widget.Box({
-    class_name: 'batt',
-    css: 'min-width: 65px',
+const batteryContainer = () => Widget.Box({
+    class_name: 'batteryContainer',
     children: [
+		battery(),
     ],
 });
+
+const battery = () => Widget.Box({
+	class_name: 'battery',
+	children: [
+	Widget.Icon().hook(Battery, self =>{
+                 if(Battery.available){
+                    const icon = Battery.percent;
+                    const category = {
+                      100: 'excellent',
+                      67: 'good',
+                      34: 'ok',
+                      1: 'weak',
+                      0: 'none',
+                    }
+                    self.icon = `battery`;
+                }else{
+                  self.icon = `battery`;
+                }
+              }),
+		Widget.Button({
+			child:
+Widget.Label('-').hook(Battery,self =>{
+                  if(Battery.available){
+                    self.label = `${network.wired.internet}`;
+                  }else{
+                    self.label = `PC`;
+                  }
+		}),
+		
+            }), 
+	],
+});
+
+
+
+
 
 
 const wifiBox = () => Widget.Box({
@@ -178,7 +215,7 @@ const Right = () => Widget.Box({
     spacing: 8,
     children: [
         //power(),
-        //batt(),
+        batteryContainer(),
         volumeContainer(),
         //blue(),
         Network1(),
