@@ -1,17 +1,18 @@
 window.bar {
-    background-color: black;
-    color: white;
+    background-color: #282a36;
+    color: #f8f8f2;
     font-family: "JetBrainsMono Nerd Font";
+    border-bottom: 1px black;
 }
 
 .workspaces {
-    background-color: #1c1c1c;
+    background-color: #3d3f51;
     border-radius: 5px;
     margin: 5px;
 }
 
 .workspaces button{	
-    background-color: #2e2e2e;
+    background-color: #44475a;
     min-width: 25px;	
     margin: 3px;
     border-radius: 5px;
@@ -23,37 +24,37 @@ window.bar {
 }
 
 .volume{
-  color: #78dbaa;
-  background-color: #2e2e2e;
+  color: #50fa7b;
+  background-color: #44475a;
   border-radius: 5px;
   padding-left: 5px;
   margin: 3px;
 }
 
 .volume button:hover{
-  color: #78dbaa;
+  color: #50fa7b;
 }
 
 .Network button:hover{ 
-  color: #0099FF;
+  color: #8be9fd;
 }
 
 .connection {
-  background-color: #2e2e2e;
+  background-color: #44475a;
 
   border-radius: 5px;
   margin:3px;
 }
 
 .Network{
-  background-color: #1c1c1c;
-  margin: 4px;
+  background-color: #3d3f51;
+  margin: 5px;
   border-radius: 5px;
-  color: #0099FF;
+  color: #8be9fd;
 }
 
 .bright {
-  background-color: #2e2e2e;
+  background-color: #44475a;
   margin: 5px;
   border-radius: 5px;
   padding-left: 5px;
@@ -61,7 +62,7 @@ window.bar {
 }
 
 .batt {
-  background-color: #2e2e2e;
+  background-color: #44475a;
   margin: 5px;
   border-radius: 5px;
   padding-left: 5px;
@@ -69,7 +70,7 @@ window.bar {
 }
 
 .blue {
-  background-color: #2e2e2e;
+  background-color: #44475a;
   margin: 5px;
   border-radius: 5px;
   padding-left: 5px;
@@ -77,7 +78,7 @@ window.bar {
 }
 
 .power{
-  background-color: #2e2e2e;
+  background-color: #44475a;
   margin: 5px;
   border-radius: 5px;
   padding-left: 5px;
@@ -85,14 +86,14 @@ window.bar {
 }
 
 .volume button{
-  color: white;
-  background: #2e2e2e;
+  color: #f8f8f2;
+  background: #44475a;
 
 }
 
 .Network button{
-  color: white;
-  background: #2e2e2e;
+  color: #f8f8f2;
+  background: #44475a;
   border-radius: 5px;
 }
 
@@ -103,18 +104,18 @@ button {
     margin: 5px;
     background: black;
     border-radius: 0%;
-    color: #78dbaa;
+    color: #bd93f9;
 }
 
 
 .volumeContainer{
-	background-color: #1c1c1c;
+	background-color: #3d3f51;
 	border-radius: 5px;
-	margin: 4px;
+	margin: 5px;
 }
 
 .clockContainer{
-	background-color: #1c1c1c;
+	background-color: #3d3f51;
 	margin: 5px;
 	border-radius: 5px;
 }
@@ -122,8 +123,8 @@ button {
 
 
 .workspaces button:hover {
-    color: white;
-    background-color: #202020; 
+    color: #f8f8f2;
+    background-color: #363848; 
 }
 
 label {
@@ -131,8 +132,8 @@ label {
 }
 
 .workspaces button.focused {
-    color: white;
-    background-color: #202020;
+    color: #f8f8f2;
+    background-color: #363848;
 }
 
 .wifiBox{
@@ -143,16 +144,37 @@ label {
 }
 
 .clockContainer button{
-   background-color: #2e2e2e;
+   background-color: #44475a;
    border-radius: 5px;
    margin: 3px;
    padding: 3px;
+   color: #f8f8f2;
 }
 
 
 
 .clockContainer button:hover{
-    color: white;
-    background-color: #202020;
+    color: #f8f8f2;
+    background-color: #363848;
 }
 
+
+.battery{
+  background-color: #44475a;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 7px;
+  margin: 3px;
+  color: #ffb86c;
+}
+
+.batteryContainer{
+	background-color: #3d3f51;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.batteryContainer button{
+	color: #f8f8f2;
+	background-color: #44475a;
+}
