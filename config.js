@@ -64,6 +64,7 @@ const Volume = () => Widget.Box({
 
 const network = await Service.import('network')
 
+
 const Network1 = () => Widget.Box({
     class_name: 'Network',
     css: 'min-width: 65px',
@@ -86,20 +87,19 @@ const connection = () => Widget.Box({
     class_name: 'connection',
     children: [
         Widget.Icon().hook(network, self => {
-            if (network.primary == 'wifi') {
+            if (network.primary === 'wifi') {
                 const icon = network.wifi.strenght;
-
-                if (icon < 100) {
+                if (icon <= 100) {
                     self.icon = `network-wireless-signal-excellent`;
-                } else if (icon < 67) {
+                } else if (icon <= 67) {
                     self.icon = `network-wireless-signal-good`;
-                } else if (icon < 34) {
+                } else if (icon <= 34) {
                     self.icon = `network-wireless-signal-ok`;
                 } else if (icon <= 1) {
                     self.icon = `network-wireless-signal-weak`;
                 }
 
-            } else if (network.primary == 'wired') {
+            } else if (network.primary === 'wired') {
                 self.icon = `network-wired`;
             } else {
                 self.icon = `network-offline`;
@@ -154,24 +154,18 @@ const battery = () => Widget.Box({
         Widget.Icon().hook(Battery, self => {
             if (Battery.available) {
                 const icon = Battery.percent;
-                const category = {
-                    100: 'battery',
-                    67: 'battery-good',
-                    40: 'batter-caution',
-                    20: 'batter-low',
-                    1: 'dialog-warning',
-                }
+
                 if (Battery.charging) {
                     self.icon = `weather-storm`;
 
                 } else {
-                    if (icon < 100) {
+                    if (icon <= 100) {
                         self.icon = 'battery';
                     } else if (icon < 67) {
                         self.icon = 'battery-good';
-                    } else if (icon < 40) {
+                    } else if (icon <= 40) {
                         self.icon = 'batter-caution';
-                    } else if (icon < 20) {
+                    } else if (icon <= 20) {
                         self.icon = 'batter-low';
                     } else if (icon <= 1){
                         self.icon = 'dialog-warning';
