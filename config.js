@@ -177,8 +177,9 @@ Widget.Label('-').hook(Battery,self =>{
 		
 		    if(Battery.charging){
 			self.label = `charging`				
-		    }
+		    }else{
                     self.label = `${Battery.percent}%`;
+		   }
 			
                   }else{
                     self.label = `PC`;
