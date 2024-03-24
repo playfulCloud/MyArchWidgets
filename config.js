@@ -88,7 +88,7 @@ const connection = () => Widget.Box({
     children: [
         Widget.Icon().hook(network, self => {
             if (network.primary === 'wifi') {
-                const icon = network.wifi.strenght;
+                const icon = network.wifi.strength;
                 if (icon <= 100 && icon > 67) {
                     self.icon = `network-wireless-signal-excellent`;
                 } else if (icon <= 67 && icon > 34) {
