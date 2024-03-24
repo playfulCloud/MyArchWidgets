@@ -153,19 +153,19 @@ const battery = () => Widget.Box({
     children: [
         Widget.Icon().hook(Battery, self => {
             if (Battery.available) {
-                const icon = Battery.percent;
 
                 if (Battery.charging) {
                     self.icon = `weather-storm`;
 
                 } else {
-                    if (icon <= 100) {
+                    const icon = Battery.percent;
+                    if (icon <= 100 && icon > 67) {
                         self.icon = 'battery';
-                    } else if (icon < 67) {
+                    } else if (icon < 67 && icon > 40) {
                         self.icon = 'battery-good';
-                    } else if (icon <= 40) {
+                    } else if (icon <= 40 && icon > 20) {
                         self.icon = 'batter-caution';
-                    } else if (icon <= 20) {
+                    } else if (icon <= 20 && icon > 1) {
                         self.icon = 'batter-low';
                     } else if (icon <= 1){
                         self.icon = 'dialog-warning';
