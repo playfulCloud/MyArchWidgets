@@ -155,23 +155,30 @@ const battery = () => Widget.Box({
                  if(Battery.available){
                     const icon = Battery.percent;
                     const category = {
-                      100: 'excellent',
-                      67: 'good',
-                      34: 'ok',
-                      1: 'weak',
-                      0: 'none',
+                      100: 'battery',
+                      67: 'battery-good',
+                      40: 'batter-caution',
+                      20: 'batter-low',
+                      1: 'dialog-warning',
                     }
-                    self.icon = `battery`;
+                    self.icon = `${categor[icon]}`;
+		    if(Battery.chargin){
+			self.icon = `weather-storm`;
+
+		    }
                 }else{
-                  self.icon = `battery`;
+                  self.icon = `weather-storm`;
                 }
               }),
 		Widget.Button({
 			child:
 Widget.Label('-').hook(Battery,self =>{
                   if(Battery.available){
-		    
-                    self.label = `${Battery.percent}`;
+		
+		    if(Battery.charging){
+			self.label = `charging`				
+		    }
+                    self.label = `${Battery.percent}%`;
 			
                   }else{
                     self.label = `PC`;
