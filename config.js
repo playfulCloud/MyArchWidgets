@@ -170,7 +170,9 @@ const battery = () => Widget.Box({
 			child:
 Widget.Label('-').hook(Battery,self =>{
                   if(Battery.available){
-                    self.label = `${network.wired.internet}`;
+		    
+                    self.label = `${Battery.percent}`;
+			
                   }else{
                     self.label = `PC`;
                   }
