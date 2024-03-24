@@ -161,7 +161,7 @@ const battery = () => Widget.Box({
                       20: 'batter-low',
                       1: 'dialog-warning',
                     }
-                    self.icon = `${categor[icon]}`;
+                    self.icon = `${category[icon]}`;
 		    if(Battery.chargin){
 			self.icon = `weather-storm`;
 
