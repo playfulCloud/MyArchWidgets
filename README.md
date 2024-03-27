@@ -29,5 +29,5 @@ We aim to continually enhance the My Arch widgets, ensuring each widget not only
 The images showcasing the current widgets are placeholders and will be updated with the actual widgets in action soon.
 ![image](https://github.com/playfulCloud/MyArchWidgets/assets/55619673/fcf5f6d9-e742-4be0-92b4-098fa3adf23c)
 
-
+!
 1
