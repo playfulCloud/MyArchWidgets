@@ -3,178 +3,166 @@ window.bar {
     color: #f8f8f2;
     font-family: "JetBrainsMono Nerd Font";
     border-bottom: 1px black;
+    min-height: 24px; /* Zmniejsz min-height */
+    padding: 0; /* Zmniejsz padding */
 }
 
 .workspaces {
     background-color: #3d3f51;
     border-radius: 5px;
-    margin: 5px;
+    margin: 2px; /* Zmniejsz margin */
+    min-height: 20px; /* Zmniejsz min-height */
 }
-
-.workspaces button{	
+.clockContainer button{
     background-color: #44475a;
-    min-width: 25px;	
-    margin: 3px;
     border-radius: 5px;
+    color: white;
 }
-
-.menu{
-    background: #78dbaa;
-    min-width: 50px;
+.batteryContainer{
+    background-color: #3d3f51;
+    border-radius: 5px;
+    margin: 2px;
+    color: orange;
 }
-
-.volume{
-  color: #50fa7b;
-  background-color: #44475a;
-  border-radius: 5px;
-  padding-left: 5px;
-  margin: 3px;
-}
-
-.volume button:hover{
-  color: #50fa7b;
-}
-
-.Network button:hover{ 
-  color: #8be9fd;
-}
-
-.connection {
-  background-color: #44475a;
-
-  border-radius: 5px;
-  margin:3px;
-}
-
-.Network{
-  background-color: #3d3f51;
-  margin: 5px;
-  border-radius: 5px;
-  color: #8be9fd;
-}
-
-.bright {
-  background-color: #44475a;
-  margin: 5px;
-  border-radius: 5px;
-  padding-left: 5px;
-  color: #0099FF;
-}
-
-.batt {
-  background-color: #44475a;
-  margin: 5px;
-  border-radius: 5px;
-  padding-left: 5px;
-  color: #0099FF;
-}
-
-.blue {
-  background-color: #44475a;
-  margin: 5px;
-  border-radius: 5px;
-  padding-left: 5px;
-  color: #0099FF;
-}
-
-.power{
-  background-color: #44475a;
-  margin: 5px;
-  border-radius: 5px;
-  padding-left: 5px;
-  color: #0099FF;
-}
-
-.volume button{
-  color: #f8f8f2;
-  background: #44475a;
-
-}
-
-.Network button{
-  color: #f8f8f2;
-  background: #44475a;
-  border-radius: 5px;
-}
-
-button {
-    all: unset;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 5px;
-    background: black;
-    border-radius: 0%;
-    color: #bd93f9;
-}
-
-
-.volumeContainer{
-	background-color: #3d3f51;
-	border-radius: 5px;
-	margin: 5px;
-}
-
-.clockContainer{
-	background-color: #3d3f51;
-	margin: 5px;
-	border-radius: 5px;
-}
-
-
-
-.workspaces button:hover {
+.batteryContainer button{
     color: #f8f8f2;
-    background-color: #363848; 
+    background-color: #44475a;
 }
 
-label {
-    font-weight: bold;
+.battery{
+    background-color: #44475a;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 7px;
+    margin: 2px;
+    color: #ffb86c;
 }
 
 .workspaces button.focused {
     color: #f8f8f2;
     background-color: #363848;
 }
-
-.wifiBox{
-  background-color: black;
-  min-width: 400px;
-  min-height: 200px;
-  border-radius: 5px;
+.workspaces button {    
+    background-color: #44475a;
+    min-width: 25px;
+    margin: 1px; /* Zmniejsz margin */
+    border-radius: 5px;
+    min-height: 18px; /* Zmniejsz min-height */
 }
 
-.clockContainer button{
-   background-color: #44475a;
-   border-radius: 5px;
-   margin: 3px;
-   padding: 3px;
-   color: #f8f8f2;
+.menu {
+    background: #78dbaa;
+    min-width: 50px;
+    min-height: 20px; /* Zmniejsz min-height */
 }
 
+.volume {
+    color: #50fa7b;
+    background-color: #44475a;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin: 2px; /* Zmniejsz margin */
+    min-height: 20px; /* Zmniejsz min-height */
+}
 
+.volume button:hover {
+    color: #50fa7b;
+}
 
-.clockContainer button:hover{
+.Network button:hover { 
+    color: #8be9fd;
+}
+.workspaces button:hover {
     color: #f8f8f2;
     background-color: #363848;
 }
 
-
-.battery{
-  background-color: #44475a;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 7px;
-  margin: 3px;
-  color: #ffb86c;
+.connection {
+    background-color: #44475a;
+    border-radius: 5px;
+    margin: 2px; /* Zmniejsz margin */
+    min-height: 20px; /* Zmniejsz min-height */
 }
 
-.batteryContainer{
-	background-color: #3d3f51;
-	margin: 5px;
-	border-radius: 5px;
+.Network {
+    background-color: #3d3f51;
+    margin: 2px; /* Zmniejsz margin */
+    border-radius: 5px;
+    color: #8be9fd;
+    min-height: 20px; /* Zmniejsz min-height */
 }
 
-.batteryContainer button{
-	color: #f8f8f2;
-	background-color: #44475a;
+.bright {
+    background-color: #44475a;
+    margin: 2px; /* Zmniejsz margin */
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #0099FF;
+    min-height: 20px; /* Zmniejsz min-height */
 }
+
+.batt {
+    background-color: #44475a;
+    margin: 2px; /* Zmniejsz margin */
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #0099FF;
+    min-height: 20px; /* Zmniejsz min-height */
+}
+
+.blue {
+    background-color: #44475a;
+    margin: 2px; /* Zmniejsz margin */
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #0099FF;
+    min-height: 20px; /* Zmniejsz min-height */
+}
+
+.power {
+    background-color: #44475a;
+    margin: 2px; /* Zmniejsz margin */
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #0099FF;
+    min-height: 20px; /* Zmniejsz min-height */
+}
+
+.volume button {
+    color: #f8f8f2;
+    background: #44475a;
+    min-height: 18px; /* Zmniejsz min-height */
+}
+
+.Network button {
+color: #f8f8f2;
+background: #44475a;
+    border-radius: 5px;
+    min-height: 18px; /* Zmniejsz min-height */
+}
+
+button {
+    all: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 2px; /* Zmniejsz margin */
+    background: black;
+    border-radius: 0%;
+    color: #bd93f9;
+    min-height: 18px; /* Zmniejsz min-height */
+}
+
+.volumeContainer {
+    background-color: #3d3f51;
+    border-radius: 5px;
+    margin: 2px; /* Zmniejsz margin */
+    min-height: 20px; /* Zmniejsz min-height */
+}
+
+.clockContainer {
+    background-color: #3d3f51;
+    margin: 2px; /* Zmniejsz margin */
+    border-radius: 5px;
+    min-height: 20px; /* Zmniejsz min-height */
+}
+
