@@ -110,7 +110,7 @@ const connection = () => Widget.Box({
             child:
                 Widget.Label('-').hook(network, self => {
                     if (network.primary == 'wired') {
-                        self.label = `${network.wired.internet}`;
+                        self.label = `${network.connectivity}`;
                     } else if (network.primary == 'wifi') {
                         self.label = `${network.wifi.internet}`;
                     } else {
@@ -164,9 +164,9 @@ const battery = () => Widget.Box({
                     } else if (icon < 67 && icon > 40) {
                         self.icon = 'battery-good';
                     } else if (icon <= 40 && icon > 20) {
-                        self.icon = 'batter-caution';
+                        self.icon = 'battery-caution';
                     } else if (icon <= 20 && icon > 1) {
-                        self.icon = 'batter-low';
+                        self.icon = 'battery-low';
                     } else if (icon <= 1){
                         self.icon = 'dialog-warning';
                     }
@@ -274,6 +274,5 @@ export default {
     windows: [
         //Bar(),
         Bar(0),
-        Bar(1)
     ],
 };
